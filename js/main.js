@@ -33,9 +33,9 @@ prevDom.onclick = function () {
 let timeRunning = 500;
 let timeAutoNext = 7000;
 let runTimeOut;
-let runAutoRun = setTimeout(() => {
-  nextDom.click();
-}, timeAutoNext);
+// let runAutoRun = setTimeout(() => {
+//   nextDom.click();
+// }, timeAutoNext);
 function showSlider(type) {
   let itemSlider = document.querySelectorAll(".carousel .list .item");
   let itemThumbnail = document.querySelectorAll(".carousel .thumbnail .item");
@@ -51,11 +51,11 @@ function showSlider(type) {
     carouselDom.classList.add("prev");
   }
 
-  clearTimeout(runTimeOut);
-  runTimeOut = setTimeout(() => {
-    carouselDom.classList.remove("next");
-    carouselDom.classList.remove("prev");
-  }, timeRunning);
+  // clearTimeout(runTimeOut);
+  // runTimeOut = setTimeout(() => {
+  //   carouselDom.classList.remove("next");
+  //   carouselDom.classList.remove("prev");
+  // }, timeRunning);
 }
 
 /* ---------------------- prosress bar ---------------- */
