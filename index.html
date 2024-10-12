@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Task</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!--start:: Navbar-->
+    <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"
+          ><img src="img/logo.png" class="logo"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#main"
+          aria-controls="main"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link p-lg-3 p-2 active" aria-current="page" href="#"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link p-lg-3 p-2" href="#">About Us</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle p-lg-3 p-2"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Services
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Security Services</a></li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Services Crowd Management</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Services Valet & Car Parking</a
+                  >
+                </li>
+                <li><a class="dropdown-item" href="#">Services Car Wash</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link p-lg-3 p-2" href="#">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link p-lg-3 p-2" href="#">Jobs</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ms-auto ps-3 pe-3 mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle p-lg-3 p-2"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                En
+                <i class="fi fi-gb"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><i class="fi fi-gb"></i> English</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><i class="fi fi-sa"></i> Arabic</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--end:: Navbar-->
+    <!--start:: landing-->
+    <div class="landing">
+      <div class="play" data-bs-toggle="modal" data-bs-target="#video-modal">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="49"
+          height="49"
+          fill="url(#gradient)"
+          class="bi bi-play-fill"
+          viewBox="0 0 16 16"
+          style="filter: url(#blur-filter)"
+        >
+          <defs>
+            <!-- تعريف التدرج اللوني -->
+            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color: white; stop-opacity: 1" />
+              <stop
+                offset="100%"
+                style="stop-color: #1600fd; stop-opacity: 1"
+              />
+            </linearGradient>
+
+            <!-- تعريف التمويه -->
+            <filter id="blur-filter">
+              <feGaussianBlur stdDeviation="12" />
+            </filter>
+          </defs>
+
+          <!-- المسار الخاص بالأيقونة -->
+          <path
+            d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"
+          />
+        </svg>
+      </div>
+    </div>
+    <!--end:: landing-->
+    <!-- start:: About us -->
+    <div class="about-us text-light">
+      <div class="row about mt-5">
+        <div class="col-md-5 d-flex about-left">
+          <h2>About Us</h2>
+        </div>
+        <div class="col-md-7 about-right">
+          <p>
+            Al Waseet is dedicated to enhancing the well-being of residents,
+            visitors, and business owners in Saudi Arabia and Dubai. We not only
+            provide top-notch security services but also offer a comprehensive
+            range of additional services such as crowd management as well as
+            valet & car parking services. These services are meticulously
+            designed to contribute to a safe and comfortable environment in both
+            regions.
+          </p>
+        </div>
+        <div class="col mt-10 about-footer">
+          <h2>Al waseet</h2>
+        </div>
+      </div>
+    </div>
+    <!-- end:: About us -->
+    <!-- start:: services -->
+    <div class="heading">
+      <h1>Our Primary Services</h1>
+      <p>We always provide the best possible solutions</p>
+    </div>
+    <!-- end:: services -->
+    <!-- start:: carousel -->
+    <div class="carousel">
+      <!-- list item -->
+      <div class="progress">
+        <ul class="progress-steps">
+          <li class="step active" data-index="0">
+            <span></span>
+          </li>
+          <li class="step" data-index="1">
+            <span></span>
+          </li>
+          <li class="step" data-index="2">
+            <span></span>
+          </li>
+        </ul>
+      </div>
+      <div class="list">
+        <div class="item item1 backs active">
+          <img src="img/img1.jpg" />
+          <div class="content">
+            <div class="title">Security Services</div>
+            <div class="des col-md-9">
+              Security is not merely a service; it's a commitment to
+              safeguarding the well-being of our clients, their assets, and the
+              environments in which they operate. At Al waseet, the essence of
+              Security Services transcends conventional protection - it embodies
+              a profound dedication to vigilance, adaptability, and proactive
+              risk mitigation.
+            </div>
+            <div class="buttons">
+              <button>An Offer</button>
+            </div>
+          </div>
+        </div>
+        <div class="item item2 backs">
+          <img src="img/img2.jpg" />
+          <div class="content">
+            <div class="title">Crowd management</div>
+            <div class="des col-md-9">njanfanfa</div>
+            <div class="buttons">
+              <button>An Offer</button>
+            </div>
+          </div>
+        </div>
+        <div class="item item3 backs">
+          <img src="img/img3.jpg" />
+          <div class="content">
+            <div class="title">Valet & Car Parking Services</div>
+            <div class="des col-md-9">njanfanfa</div>
+            <div class="buttons">
+              <button>An Offer</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- thumbnail -->
+      <div class="thumbnail">
+        <div class="item">
+          <img src="img/img1.jpg" />
+          <div class="content">
+            <div class="title">Security Services</div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="img/img2.jpg" />
+          <div class="content">
+            <div class="title">Crowd management</div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="img/img3.jpg" />
+          <div class="content">
+            <div class="title">Valet & Car Parking Services</div>
+          </div>
+        </div>
+      </div>
+      <!-- arrows -->
+      <div class="arrows">
+        <button id="prev">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="white"
+            class="bi bi-arrow-left"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"
+            />
+          </svg>
+        </button>
+        <button id="next">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="white"
+            class="bi bi-arrow-right"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+            />
+          </svg>
+        </button>
+      </div>
+      <div class="img-progress">
+        <div class="progress-text-left">1</div>
+        <div class="img-progress-bar"></div>
+        <div class="progress-text-right">3</div>
+      </div>
+      <div class="time"></div>
+    </div>
+    <!-- end:: carousel -->
+    <!-- start:: video modal -->
+    <div
+      class="modal fade video-modal js-course-preview-modal"
+      id="video-modal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="fas fa-times"></i>
+            </button>
+            <div class="ratio ratio-16x9">
+              <video controls class="js-course-preview-video">
+                <source src="video/course-preview.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end:: video modal -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
