@@ -1,0 +1,752 @@
+/* ------------------------- google font -------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*{
+    user-select: none;
+}
+
+body {
+    font-family: poppins;
+    background-color: black;
+}
+
+/* ------------------------------ Navbar --------------------- */
+.navbar {
+    background-color: transparent;
+    border: 1px solid;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    height: 80px;
+    margin: 90px;
+    margin-top: 34px;
+    padding: 10px;
+    z-index: 100;
+}
+
+.navbar .navbar-nav .nav-link {
+    color: white;
+}
+
+.navbar .navbar-toggler {
+    color: white;
+    border: none;
+}
+
+.navbar .navbar-toggler-icon {
+    background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23ffffff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar .navbar-toggler:focus, btn-close:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.logo {
+    height: 84px;
+}
+
+.navbar-nav .dropdown-menu {
+    background-color: rgba(9, 9, 9, 0.5);
+    margin: 10px;
+    backdrop-filter: blur(10px);
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.dropdown-item {
+    color: white;
+}
+
+.dropdown-item:hover {
+    background-color: transparent;
+    border: 1px solid;
+    border-radius: 5px;
+    color: white;
+}
+
+@media (max-width: 991px) {
+    .navbar {
+        border: none;
+        margin: 16px;
+        margin-right: 16px;
+        margin-top: 22px;
+    }
+}
+
+/*-------------------- landing------------*/
+.landing {
+    background: url(../img/hero-section.jpg) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing::before {
+    background: linear-gradient(to top, black, transparent 50%);
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.landing .play {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background: transparent;
+    border-radius: 50%;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.landing.acive .play {
+    box-shadow: 0 0 0 150vh rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+}
+
+.landing .play::before {
+    content: "";
+    position: absolute;
+    border: 40px solid rgba(255, 255, 255, 0.3);
+    border-top: 28px solid transparent;
+    border-bottom: 28px solid transparent;
+    border-right: 0 solid transparent;
+    transform: translateX(5px);
+}
+
+.clip {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    transition: 0.5s;
+}
+
+.clip.active {
+    transition-delay: 0.5s;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.clip video {
+    max-width: 900px;
+    outline: none;
+    border: 10px solid transparent;
+    border-radius: 20px;
+}
+
+.clip .close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: white;
+}
+
+@media (max-width: 991px) {
+    .clip video {
+        max-width: 90%;
+    }
+}
+
+/*------------------- About us ------------------- */
+.about-us {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 20px;
+    overflow: hidden;
+}
+
+.about-us::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    background: url(../img/about-us.jpg) no-repeat center;
+    background-size: cover;
+    filter: blur(30px);
+    opacity: 0.3;
+    z-index: 0;
+}
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+.about-left {
+    justify-content: end;
+    align-items: center;
+    margin-top: 130px;
+}
+
+.about-left h2 {
+    font-weight: 600;
+    font-size: 80px;
+}
+
+.about-right {
+    margin-top: 130px;
+}
+
+.about-right p {
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.about-footer {
+    margin-top: -50px;
+}
+
+.about-footer h2 {
+    font-weight: 600;
+    font-size: 250px;
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .about {
+        flex-direction: column;
+    }
+
+    .about-left {
+        order: 1;
+        margin-bottom: 20px;
+        justify-content: start;
+        align-items: start;
+    }
+
+    .about-footer {
+        order: 2;
+        justify-content: start;
+        align-items: start;
+    }
+
+    .about-right {
+        order: 3;
+        margin-top: 10px;
+    }
+
+    .about-left h2 {
+        font-size: 50px;
+    }
+
+    .about-footer h2 {
+        font-size: 70px;
+        -webkit-text-stroke: 0.1px white;
+    }
+
+    .about-right p {
+        font-size: 16px;
+    }
+}
+
+/* ------------------------ Services --------------- */
+.heading {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px auto;
+    color: white;
+}
+
+.heading h1 {
+    font-weight: 700;
+    font-size: 60px;
+    position: relative;
+}
+
+.heading p {
+    font-weight: 400;
+    font-size: 28px;
+    position: relative;
+}
+
+@media screen and (max-width: 991px) {
+    .heading h1 {
+        font-weight: 700;
+        font-size: 35px;
+        position: relative;
+    }
+    
+    .heading p {
+        font-weight: 400;
+        font-size: 16px;
+        position: relative;
+    }
+}
+
+/* -------------------------- carousel ------------------ */
+.carousel {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.carousel .list .item {
+    position: absolute;
+    inset: 0 0 0 0;
+}
+
+.carousel .list .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel .list .item::before {
+    background: linear-gradient(to top, black, transparent 50%);
+    backdrop-filter: blur(3px);
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.carousel .list .item .content {
+    position: absolute;
+    top: 20%;
+    width: 1140px;
+    max-width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-right: 30%;
+    box-sizing: border-box;
+    color: white;
+    text-shadow: 0 5px 10px #0004;
+}
+
+.carousel .list .item .content .title {
+    font-weight: 900;
+    font-size: 45px;
+    line-height: 85px;
+}
+
+.carousel .list .item .content .des {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.carousel .list .item .content .buttons {
+    display: grid;
+    grid-template-columns: repeat(1, 145px);
+    grid-template-rows: 40px;
+    gap: 5px;
+    margin-top: 63px;
+}
+
+.carousel .list .item .content button {
+    border: 1px solid white;
+    border-radius: 8px;
+    color: white;
+    background-color: transparent;
+    letter-spacing: 3px;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+/* ----------------------- thumbanils --------------- */
+.thumbnail {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    width: max-content;
+    z-index: 100;
+    display: flex;
+    gap: 20px;
+}
+
+.thumbnail .item {
+    width: 353px;
+    height: 510.93px;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.thumbnail .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.thumbnail .item::before {
+    background: linear-gradient(to top, black, transparent 50%);
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 15px;
+}
+
+.thumbnail .item .content {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+
+.thumbnail .item .content .title {
+    font-weight: 500;
+    color: white;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 40px;
+    margin: 10px;
+}
+
+/* ----------------- Arrows ----------------- */
+.arrows {
+    position: absolute;
+    left: 116px;
+    bottom: 48px;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.arrows button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: transparent;
+    z-index: 100;
+}
+
+.carousel .list .item:nth-child(1) {
+    z-index: 1;
+}
+
+.carousel .list .item:nth-child(1) .title,
+.carousel .list .item:nth-child(1) .des,
+.carousel .list .item:nth-child(1) .buttons {
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent 0.5s 1s linear 1 forwards;
+}
+
+@keyframes showContent {
+    to {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0);
+    }
+}
+
+.carousel .list .item:nth-child(1) .title {
+    animation-delay: 1.2s;
+}
+
+.carousel .list .item:nth-child(1) .des {
+    animation-delay: 1.4s;
+}
+
+/* ------------------ effect next click ------------- */
+.carousel.next .list .item:nth-child(1) img {
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    border-radius: 20px;
+    animation: showImage 0.5s linear 1 forwards;
+}
+
+@keyframes showImage {
+    to {
+        width: 100%;
+        height: 100%;
+        left: 0;
+        bottom: 0;
+        border-radius: 0;
+    }
+}
+
+.carousel.next .thumbnail .item:nth-last-child(1) {
+    width: 0;
+    overflow: hidden;
+    animation: showThumbnail 0.5s linear 1 forwards;
+}
+
+@keyframes showThumbnail {
+    to {
+        width: 150px;
+    }
+}
+
+.carousel.next .thumbnail {
+    transform: translateY(150px);
+    animation: transformThumbnail 0.5s linear 1 forwards;
+}
+
+@keyframes transformThumbanil {
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* ---------------- effect prev click ---------------- */
+.carousel.prev .list .item:nth-child(2) {
+    z-index: 2;
+}
+
+.carousel.prev .list .item:nth-child(2) img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: outImage 0.5s linear 1 forwards;
+}
+
+@keyframes outImage {
+    to {
+        width: 150px;
+        height: 220px;
+        border-radius: 20px;
+        left: 50%;
+        bottom: 50px;
+    }
+}
+
+.carousel.prev .thumbnail .item:nth-child(1) {
+    width: 0;
+    overflow: hidden;
+    opacity: 0;
+    animation: showThumbnail 0.5s linear 1 forwards;
+}
+
+.carousel.prev .list .item:nth-child(2) .title,
+.carousel.prev .list .item:nth-child(2) .des,
+.carousel.prev .list .item:nth-child(2) .buttons {
+    animation: contentOut 1.5s linear 1 forwards !important;
+}
+
+@keyframes contentOut {
+    to {
+        transform: translateY(-150px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+
+.carousel.next .arrows button,
+.carousel.prev .arrows button {
+    pointer-events: none;
+}
+
+/* ------------- time ----------- */
+.time {
+    width: 0%;
+    height: 5px;
+    background-color: #f1683a;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+}
+
+.carousel.next .time,
+.carousel.prev .time {
+    width: 100%;
+    animation: timeRunning 2s linear 1 forwards;
+}
+
+@keyframes timeRunning {
+    to {
+        width: 0;
+    }
+}
+
+/* ------------------- progress bar -------------------- */
+.site .container {
+    max-width: 1100px;
+    padding: 0 2em;
+}
+
+.progress {
+    position: absolute;
+    top: 150px;
+    left: 150px;
+    transform: translateX(-50%);
+    z-index: 10;
+    padding: 1em;
+    height: 280px;
+    background: transparent;
+}
+
+.progress ul.progress-steps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    cursor: pointer;
+}
+
+.progress ul.progress-steps li {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2em;
+}
+
+.progress ul.progress-steps li>span {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1em;
+    border-radius: 50%;
+    background-color: white;
+    border: 4px solid #001446;
+    z-index: 1;
+}
+
+.progress ul.progress-steps li.active>span {
+    background-color: white;
+    border: 3px solid #001446;
+    outline: 2px solid white;
+    z-index: 1;
+}
+
+@media screen {
+    .progress {
+        flex: 1 0 35%;
+        min-width: 300px;
+        padding: 3em;
+    }
+
+    .progress ul.progress-steps {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .progress ul.progress-steps li:not(:last-child)::before {
+        content: '';
+        position: absolute;
+        left: 10px;
+        top: -30px;
+        width: 2px;
+        height: 130px;
+        background: linear-gradient(to bottom, transparent 10%, white 50%, transparent 100%);
+        border-radius: 30px;
+    }
+}
+
+.img-progress {
+    position: absolute;
+    bottom: 48px;
+    right: 100px;
+    width: 150px;
+    height: 5px;
+    background-color: rgba(217, 217, 217, 0.37);
+    border-radius: 20px;
+    z-index: 10;
+}
+
+.img-progress::before {
+    content: "";
+    opacity: 0.37;
+}
+
+.img-progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: white;
+    z-index: -1;
+    border-radius: 20px;
+}
+
+.progress-text-left, .progress-text-right {
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    top: -8px;
+}
+
+.progress-text-left {
+    left: -12px;
+}
+
+.progress-text-right {
+    right: -12px;
+}
+
+@media screen and (max-width: 768px) {
+    .img-progress{
+        display: none;
+    }
+    
+    .arrows{
+        display: none;
+    }
+
+    .thumbnail {
+        top: 50px;
+        justify-content: center;
+        align-items: center;
+        left: 40px;
+    }
+
+    .thumbnail .item{
+        overflow: hidden;
+    }
+
+    .carousel .list .item .content {
+        padding-right: 0;
+        bottom: 150px;
+    }
+
+    .carousel .list .item .content .title {
+        font-size: 30px;
+    }
+}
